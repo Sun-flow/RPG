@@ -1,0 +1,357 @@
+class PseudoCharacter(){
+ 
+    First order info:
+
+        Base Character info:
+
+            playerName 
+                //Player Name
+
+            charName 
+                //Character Name
+
+            statsArray 
+                //Array containing characters attribute numbers
+
+        Info on character's origin, backstory, and powers:
+
+            experience 
+                //Defining experience of a character that shaped their life and powers 
+                
+            affinity 
+                //What their powers interact with, what they specifically can affect
+
+            manifestation 
+                //How a character's powers affect the world, what they do when they are active/successful
+
+            failureOutcome 
+                //When a character's powers go wrong, what happens?
+    
+    Second order info:
+
+        //Info on character's disposition, character will get modifiers to their stats based on what these traits mean about them, and how they translate into the game world.
+
+            virtue 
+                //What makes a character great
+
+            flaw 
+                //what holds a character back
+
+            GeneralDispositionTrait1
+            GeneralDispositionTrait2
+                //Traits are aspects of a character such as being hardworking, lazy, compassionate, private, etc
+
+        //Info on character's beliefs and instincts
+
+            Beliefs:
+                //Beliefs are driving principles for a character, and should consistently inform their narrative decisions. Beliefs are meant to change at a consistent but moderate pace. A character begins with 3 by default, but has the opportunity to gain a fourth. 
+                    //Consider tying goals to beliefs
+
+                grandIdeal *THIS BELIEF IS REQUIRED*
+                    //Belief concerning a character's "Grand Ideal" or driving belief, this is something that the character actively pursues and works towards throughout their life
+
+                powersBelief 
+                    //Belief concerning a character's powers, their feelings towards them, their origin
+
+                socialBelief 
+                    //Belief concerning the another character 
+
+
+
+            Instincts:
+                //Instincts are gut reactions of a character when placed in a certain situation. When a player acts on their instincts, they will receive a +1 to their roll. When a player does something that goes against their instincts, they receive a -1 on their roll. The following are possible instinct types that a player can draw on when formulating their instincts. By default, a character begins with 2 instincts and has the opportunity to gain a third.
+
+                fearInstinct
+                    //What your character does in reaction to experiencing fear, stress, or danger
+
+                powerInstinct
+                    //What your character does when they are placed in a situation where they are in power, vying for power, or at risk of losing power 
+
+                combatInstinct
+                    //What your character does when they go into battle, or are otherwise contested
+
+                defenseInstinct
+                    //Instinct that governs a character's first impulse when a person they care about is threatened, be it physical, verbal, emotional, spiritual, etc
+
+                discomfortInstinct
+                    //What your character does when they are made to be uncomfortable, or are faced with a discomforting situation
+
+                appreciativeInstinct
+                    //What your character does when they are thankful to someone else, or when they recognize that someone has done something to help or support them
+
+                privacyInstinct
+                    //What your character does when someone attempts to glean information from them, or when they are forced to share something about themselves 
+
+                victoryInstinct/defeatInstinct
+                    //What your character does when they come out of an altercation, disagreement, or contest over something 
+
+                generalInstinct
+                    //An instinct that can regard anything. 
+}
+
+Stats{
+    Power //Strength of mind or body
+    Finesse //Agility of mind/body
+    Fortitude //Physical resilience/resistance
+    Will //Resilience of mind 
+    Intition //Perception of world through sense, powers, or inference
+    Experience //Knowledge of the world
+}
+
+Traits{
+    //Aspect of character that is narratively playable, comes with modifiers for stats
+
+    //Stats are all defaulted to 0, with traits giving bonuses and negatives to them. Each trait gives a + and a -. All of these modifiers should collectively total to 4.
+}
+
+EndOfSession(){
+    Learning points:
+
+        Gain experience:
+
+            Once per session
+                +1 if a character learned something about 
+                    - the world
+                    - themselves, their powers 
+                    - another character 
+                +1 if a character acts on their traits  
+                    +1 if they got into danger while acting on their traits
+                +1 if a character is forced to act contrary to their instincts 
+                    +1 if your character learned something about themselves in resisting their instincts
+                    +2 if your character's beliefs underwent drastic negative enforcement
+
+            Multiple times per session
+                +1 for each failed roll
+                +1 if your character acts on their beliefs or instincts (once per belief or instinct)
+                +1 if an attempt to learn something put your character into a risky situation
+                +2 if your character experienced something that:
+                    - drastically contradicts one of their beliefs
+                    - powerfully affirms one of their beliefs 
+
+        Spend Advances (Gained at 5 learning points)         
+                        //***READ THIS PLEASE, OFFER ME FEEDBACK/QUESTIONS, ESPECIALLY ON THE "BUDDING" SYSTEM***//
+                                        //Consider utilizing a "budding" system, where a character can spend 1 advance to begin working towards a trait, instinct, or belief. When enough advances have been spent on the relevant character aspect, it becomes "unlocked" for the character and can be used going forwards.
+
+            1 advance
+                - Modify an existing belief to reflect a change 
+                - Gain an inspiration point (can be spent for a +1 on a roll going forwards, max of 2 per roll can be spent)
+                
+            2 advances 
+                - Resolve a belief that has changed sufficiently to become something new entirely. Write a new belief in its place.
+                - Gain an entirely new belief (max 4)
+                - Modify an existing instinct that has been forced into a different action
+                - Gain an entirely new instinct (max 3)
+
+            3 advances
+                - Resolve an instinct that has been negatively enforced enough to be broken entirely, do not write a new instinct in its place
+                - Resolve a trait that has been sufficiently influenced within fiction, write a new one in its place and reallocate skill modifiers for this trait. Each trait must be net +1, and cannot affect any stat by more than 2 in either direction. If the trait has been improved, it must net +2 and can positively effect an attribute by 3.
+
+            4 advances
+                - Gain an entirely new trait (max 5), must have powerful narrative support
+                - Improve one of a trait's attribute effects by +1 (must be narratively supported)
+}
+
+
+Budding{
+
+    involve module for declaration of possible identity trajectories
+
+    Description{
+        //Budding is a mechanic in which a player declares a character to be working towards something like a belief, instinct, or trait. In order to acquire and activate this budding identity, a player must first declare the identity budding, then invest in achieving levels in the budding identity. For example, a player's character could begin with the trait "impulsive", but through their adventures find that they are being taught to control their impulsiveness. That player may decide that their character is working towards a different trait to complement, deal with, or accentuate their impulsiveness, such as "forward thinking", "obedient", or "discerning". Through their narrative engagements, a character's budding trait can be developed and then activated, becoming a part of their character sheet and offering them the experience gaining and rolling benefits of having an instinct, belief, or trait. 
+
+        //Below are further examples
+
+        Beliefs:
+            A character might begin the game with the belief that "All knights are pigs and shouldn't be trusted", only to be rescued from an alleyway beating by a compassionate knight later on. At first, this would likely not change the character's belief outright, but could act as a counterexample for the belief that they already hold. Let's say the knight then cares for their wounds, or takes them to an herbalist to get a salve for their bruises. Now, the character has been confronted with significant evidence that their belief is unfounded. If we assume that the belief was strongly held in the first place, it is safe to say that the belief would /still/ not be outright changed, but that the character would have begun to think about rethinking their beliefs. In this case, a player may decide to introduce a "budding belief" or a "budding change" which, once it has gathered a sufficient ammount of supporting experience or evidence, would either become an independent belief or otherwise replace the previous belief. For our example, the player may set the budding requirement for their belief change to be 3,meaning that the character would require 3 significant pieces of evidence to support or dissuade the belief before it would be changed. The character's described experience with the caring knight would have accounted for about 1 or 2 of the required pieces of evidence for their new budding belief, so after another positive experience or two with knights the character might gain a belief like, "Knights are often corrupted by their power, but many are still kind and compassionate." This could lead to a shift in the characters goals, such as an attempt to right the wrongs within the local Knights Order, in order to make a better name for knights as a whole.
+
+        Instincts:
+    }
+
+    Mechanics{
+
+            ///Mild: questioning
+            ///Moderate: alternative
+            ///Massive: commitment to a new belief
+
+
+        "Budding" can occur in and "Identity": beliefs, instincts, or traits. Beliefs and instincts will bud in similar ways, while traits will bud in a mechanically different way. When the process of Budding completes, the Identity which has undergone the process will be referred to as one that has "Flowered".
+
+        When Budding begins, the player will declare it to be a Mild, Moderate, or Massive Shift. Based on the intensity of the change, the "Support" required before an identity Flowers will change. The number is subject to the discretion of the players and GM, but typical milestones are:
+            - Mild Shift = 3 Support
+            - Moderate Shift = 5 Support
+            - Massive Shift = 7 Support
+
+        In the case of a mild change the identity may be modified slightly from its original, but should remain recognizable from its predecessor. A mild budding identity should /never/ result in dramatic shifts in character, only mild ones. In the case of a moderate or massive change, the identity may be updated at the preceeding checkpoints (mild or moderate) when it reaches them.
+
+        Support is earned when a character undergoes an experience that the player and GM believe would lead to character change. Support can be categorized utilizing the same milestone nomenclature that Budding uses (Mild, Moderate, Massive). A greater ammount of support is earned from a more impactful experience.
+            - Mild Support = 1 Support 
+            - Moderate Support = 2 Support
+            - Massive Support = 3 Support
+
+        Functionally, it should be possible to achieve a Mild Shift with a single instance of Massive Support. 
+
+        Additionally, any time Budding begins, the player and GM have the oppportunity to declare "Stakes". Stakes are a meta-game declaration of what a character's successful Identity Flowering will mean for the narrative. Stakes can be framed as "xxx will happen if my character does not Flower", or "my character will only be able to do xxx once yyy Identity has Flowered".
+
+        In the case of a Budding trait, the mechanics are slightly different. If an entirely new trait is Budding, the Shift will always be Massive. If a preexisting trait is Budding into a different trait, it will always be Moderate or Massive. 
+
+        When an entirely new trait Buds:
+            When a trait meets the mild requirement, it is added to the character sheet with no attribute modifiers. When it meets its Moderate requirement, it offers a +1 to one attribute and a -1 to another. When it meets its Massive requirement it is considered resolved, and an additional +1 can be offered to an attribute. After a trait has been fully realized, it should offer a net +1 to overall stats. 
+
+    }
+
+    Examples{
+        
+        In the previous example, a belief that began as "All knights are pigs and shouldn't be trusted" could evolve through the stages: 
+            Mild: "Knights are often corrupted by their power, but many are still kind and compassionate."
+            Moderate: "Most knights are iherently good, but are easily succeptible to corruption within a corrupt system."
+            Massive: "The Knight's Order has been rotting from the inside out for decades. Even with good knights present, it will need to be completely rebuilt in order to have any hope of decency."
+        Within this example, the belief has not only change but deepend as it was developed. This is an intended consequence of belief shifting, as the more time a person or character spends thinking about and interacting with a belief, the more complex the belief is likely to become. This example showcases the experience a character has in going from "I have this feeling about this thing", which would affect their actions towards that thing, all the way to "I feel this way abotu this thing in a very actionable way, and in fact I understand that the thing I origninally took issue with is not truly at fault". This form of belief deepening is quite common, and often comes from a character moving through the stages of: belief -> questioning belief -> belief that is mildly contrary to original belief -> recognition of middle ground between the two beliefs. 
+
+        Additionally, support for a budding identity can be mild, moderate, or massive. Depending on which it is, an identity can be marked with support multiple times from a single instance. In general, a mild supporting instance would mark support once, a moderate one would mark twice, and a massive one would mark thrice. In the case of the knights example:
+            Mild support: The character being rescued from a mugging by a knight
+            Moderate support: The knight taking the character to be given a salve or otherwise tending to the character's wounds after rescuing them 
+            Massive support: The knight and the character maintaining a relationship, becoming friends or working together in some other meaningful way.
+        At end of session, a single experience of Massive support would suffice for a mild change in belief.
+        
+        In some cases, a character might encounter an experience where "a truth is revealed," or where the character gains information that should drastically alter a belief in a single experience. In most cases, it is unlikely that that change in belief will occur all at once, even if there are no more "experiences" required by the character. A scene in which the character undergoes an emotional revelation, or a deepening of their understanding of some information, is just as much support for belief change as the information that spawned the change in the first place was.
+
+        Lets use another example of beliefs:
+
+            Character backstory: Father was distant throughout childhood, leaving her and her mother to fend for themselves in a world that was unwelcoming and antagonistic of women's abilities to support themselves. 
+           
+            Character belief: I resent my father for not providing for my family when I was young, and I have no desire to maintain a relationship with him going forward in life.
+
+            Character experience: In a dramatic revelation, the character's father reveals himself to have been a spy throughout the character's childhood and, in order to protect his family from forces that sought to get to him through them, maintained his distance from them for their own safety.
+
+            Discussion: Even in the case of the character immediately forgiving her father, the resentment that has built up over time for her will take time to unravel and unwind itself. It is unlikely that she would feel capable of trusting him completely right away, even if she is immediately willing to allow him back into her life. This would likely manifest immediately as a mild belief change    
+                Original belief: I resent my father for not providing for my family when I was young, and I have no desire to maintain a relationship with him going forward in life.
+                Mild Shift: While I understand my father's actions and am willing to work towards a relationship with him, I find it hard to overlook the resentment that I have carried with me for years so suddenly.
+            In this case, the player would likely have decided to undergo a Massive Budding Change, with this piece of supporting evidence be a single instance of Massive support that leads to a Mild shift in beliefs, with the potential for further change with time and extra support.
+
+            Budding Massive Belief: |+++|--|--|
+            
+            Further stages of belief change: Presuming the father in this example continues to make efforts to create a relationship with the character, she might experience a further set of changes in her beliefs. Lets say she undergoes the mild shift in beliefs, then decides to confront her father with her resentment. They have a fight where he implores her to understand his reasoning, to which she responds by saying he should never have become a spy in the first place if he was going to have a family. "It wasn't fair to us!" she wails, thinking only of the father she missed out on having and the loss of her mother to the harshness of the world without his support and protection. He understands, but knows he cannot change what he has done. He apologizes to her, promises to be there for her from then on in order to make up for the time he could not be. She is still hurt, but willing to allow him the chance to redeem himself.
+
+            Discussion: Now, the character has confronted her resentment and had it mildly resolved, at least to the best of her father's ability. There is a situation where she never forgives him, but for the purposes of this example I will be walking through a route towards a repaired relationship. Another belief change has likely occurred through this fight, though let's say that the player and DM both agree that this was only Moderate Support for belief change. In this case, the player has achieved a Moderate shift in belief, and might make the change as such:
+                Original belief: I resent my father for not providing for my family when I was young, and I have no desire to maintain a relationship with him going forward in life.
+                Mild Shift: While I understand my father's actions and am willing to work towards a relationship with him, I find it hard to overlook the resentment that I have carried with me for years so suddenly.
+                Moderate Shift: My father is truly repentant for his actions, and there is nothing I can do to get back the time that we have lost. It will take time to rebuild trust, but I would rather have my father in my life now, however late, than never at all.
+
+            Final stages of belief change: It is possible that the player allows the belief to remain this way for quite some time, allowing their character to slowly build trust with her father. In this case, the player may, instead of continueing the budding belief, decide to reset the budding counter and work at a slower pace for change. Hypothetically, there is space within this last section of belief change for many smaller belief changes, such as:
+                Original belief: My father is truly repentant for his actions, and there is nothing I can do to get back the time that we have lost. It will take time to rebuild trust, but I would rather have my father in my life now, however late, than never at all.
+                Mild Shift: Over the last 3 months, my father has shown his commitment to rebuilding a relationship with me. I am starting to feel that I can trust and rely on him for the first time in my life.
+                Moderate Shift: It has been a year since my father has reentered my life. In that time, he has modeled himself to be the father I never had, and has supported me in all the ways he knows how. I still regret him not being part of my childhood, but his return to my life has been far worth moving past the pain I held around his negligence.
+                Massive Shift: I understand why my father did what he did, even if it cost him relationships with those he loved. I would trust him with my life, now, and I will be forever thankful that he was able to come back into my life at all. For all the pain he caused, he has made up for it ten-fold. 
+
+            Discussion: The point here is not only to showcase how budding beliefs work, but to show that players are able to make dynamic decisions surrounding what a belief is budding towards and how long it should take. Given the first budding identity shift, the player may have felt like their character was not allowed to slowly rebuild her relationship with her father, as they had locked themselves into a massive belief change that came to quickly. In a case where the players or GM recognize that a belief has much farther to go than orignially thought, or that further change is not going to occur, it is more than valid for changes to be made to what is budding and how quickly. Budding, as a system, is meant more to act as a mechanical representation of narrative changes in characters, and should never outweight the narrative needs of a story. 
+
+        So far, I have only really discussed how changes in beliefs may come about. Ideally, the budding system should be capable of supporting changes in instincts and traits as well. Next, I will discuss what a hypothetical budding instinct change should look like, as well as what a budding trait looks like. As with anything, a budding identity does not have to be a change to a preexisting identity, but can be a wholly new identity for the character to hold. 
+
+        In the following example, I will discuss both budding traits and budding instincts. 
+
+        Budding Instincts + Traits:
+
+            For the purposes of the example, I am going to discuss what it would look like for an instinct to bud into another instinct and a trait to bud in order complement to another.
+
+            Original instinct 1, avoidance: When I am confronted for any reason, I will attempt to escape the situation as quickly as possible.
+            Original instinct 2, kleptomancy: I never know when I will find my next meal, and I most definitely won't be able to pay for it, so I've made a habit of nicking anything small of mild value that I can in order to keep myself alive.
+            Original trait, deft: Due to my life on the streets, I am capable of acting with great care and without being noticed. Many of my actions will go unobserved by others, unless I explicitly wish for them to see.
+
+            Backstory: A young boy lived his youth on the streets of a city, scrounging for food and avoiding law enforcement at all costs. As he was much smaller than anyone who might try to fight him, he relied on evasion, distraction, and avoidance in order to survive. Now, as a nearly-young-adult, he is attempting to build a mundane life for himself but consistently finds that the instincts that served him on the streets no longer serve him in "proper society". 
+
+            Experience: The young man begins developing a relationship with a local merchant's son, first through nightly encounters at a local bar. After they've chatted on multiple occations, the merchant's son offers our character a chance to make some money helping his father move boxes a week from then. Our character excitedly accepts the offer and continues talking with the son. Over the week leading up to the job, our character drunkenly admits to having grown up as a street rat. They immediately expect the son to rescind his offer or discontinue their growing friendship, but instead the son responds with kindness and understand, positing that he believes in anyone's ability to change who they are. 
+
+            The box moving day comes and our character cannot help but steal small, seemingly unnoticable things from the shipment - a few apples, a block of cheese, a silver bracelet and jeweled earrings. 
+
+            That evening, the merchant's son meets our character at the bar where he, after a few drinks, confronts our character about the things we stole. The son is not outwardly angry but, without hesitating, our character runs out of the bar and weaves through nearby alleyways, effectively losing the merchant's son without a trace.  
+
+            After coming to a stop, our character takes some time to think about the merchant's son's reaction to the things we had told him previously, wondering if the boy might be willing to forgive us. Our fear of confrontation paralyzes us, and we choose not to return to the bar. Two days later, however, we encounter the merchant's son at a different bar entirely. This time, we approach the merchant's son outright, remorseful of our prior actions. We apolgize, offer to return the jewelry but not the food, as it has already been eaten. The merchant's son laughs, thanks you for your honesty, and asks that you return the following week for another job. He promises not to tell his father that you were the theif, as there were multiple other hands present that day and it would be impossible for anyone to know who stole without a confession. 
+
+            You leave the bar feeling confused, afraid, and, above all, warm. No one has ever /trusted/ you before, especially not after you had wronged their trust, and you aren't quite used to the feeling. It goes against your nature, but you promise yourself that you will not break your newfound friend's trust again.
+
+            Discussion: At this point, player might decide that their character is reconsidering their actions in the face of the kindness the merchant's son is showing him, and choose to have their kleptomaniacal instinct become a budding instinct, and possibly even their avoidant instinct.The player also decides that their avoidant instinct is about to experience a mild change, and their kleptomaniacal instinct is about to experience a moderate change. Retrospectively, they could also decide that their decision to approach the merchant's son instead of running away a second time counts as an experience of Mild support for their avoidant instinct's budding change, and that the decision to return the jewelery and the merchant's son's forgiveness together ammount to Moderate support. 
+
+            In addition, the player may find that something that complements these changes is the trait "discerning", as it would allow the character to control their impulses more effectively. In this case, budding discerning is a Massive change that has, as of yet, received no support. Future support could look like our character choosing to resist the urge to steal, as it would negatively impact his relationship with the merchant's son.
+
+            Instinct 1, avoidance: |+--|
+            Instinct 2, kleptomancy: |++-|--|
+            Trait 1, deft.
+            Trait 2, discerning: |---|--|--|
+
+            Further experience: Without going into greater detail on how the support is aquired, let's assume that both beliefs bud completely. Presuming that the character's narrative arc continues with him building a life for himself within common society, working his way up the social ladder and achieving some measure of moderate wealth. Here are hypothetical changes that the beliefs could undergo:
+                
+                Original Instinct 1, avoidance: When I am confronted for any reason, I will attempt to escape the situation as quickly as possible.
+
+                Mild Change to Instinct 1, avoidance: When I am confronted by someone that I do not trust, I will attempt to escape the situation as quickly as possible.
+                
+                Original Instinct 2, kleptomancy: I never know when I will find my next meal, and I most definitely won't be able to pay for it, so I've made an irresistible habit of nicking anything small of mild value that I can in order to keep myself alive.
+
+                Mild Change to Instinct 2, kleptomancy: My life is changing and, even though I am used to going unfed, it is no longer necessary for me to resort to petty thievery. If I am given the opportunity to take something of considerable value, I still won't be able to resist it.
+                
+                Moderate Change to Instinct 2, kleptomancy: I am a fantastic thief, but I no longer need to thieve out of neccessity. Now, I am compelled to commit thievery when I stand to gain noteworthy riches, glory, or when it would benefit those that I care about. 
+
+            Discussion: It is entirely possible for these identities to modify themselves in very different ways, such as the character entirely resolving his thieving instinct or becoming even more avoidant than before. Regardless, the system allows for characters to adapt to the world they live in and from the experiences they've had. 
+            
+        
+    }
+
+    Stakes system for beliefs
+
+    Guide for making meaningful characters (player agenda)
+}
+
+
+
+
+
+
+
+
+confidence
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{}
+    //***DO NOT READ PAST HERE, THIS IS CURRENTLY OUT OF USE***//
+    Character points:
+
+        Gain experience:
+            +1 character point when failing any ability check
+            +1 character point and familiarity when using a skill or power
+            
+        Spend advances (gained at 5 Character points):
+            When <= 5 total advances
+                1 advance
+                    - Improve an attribute by +1, can only be taken once per attribute
+                    - Improve a power with 4+ familiarity ticks (range, size, damage, limits, category)
+
+                2 advances  
+                    - Gain a skill (if narratively supported)
+                    - Improve a power with <4 familiarity ticks
+
+            When >5 total advances
+                1 advance   
+                    - Improve a trait by +1, each attribute can be improved by a max of +2
+                    - Improve a skill by +1
+                    - Improve 2 powers with 4+ familiarity ticks
+                    - Improve a power with <4 familiarity ticks
+
+                2 advances 
+                    - Gain a skill
+                     
+}

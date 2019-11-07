@@ -1,0 +1,65 @@
+class Character(){
+    private:
+        //Name Data
+        string playerName;
+        string charName;
+
+        //Attribute Date
+        int statsArray[]; 
+        string beliefs[];
+        string instincts[];
+    public:
+
+        //Constructors
+        Character();
+        Character(string inName, int[] stats, string[] inBeliefArray, string[] inInstArray);
+        Belief();
+        Belief(string inBelief);
+        Instinct();
+        Instinct(string inInst);
+
+        void setPlayerName(char name);
+        void setCharName(char name);
+        void setStats(int stats[]);
+        void setBelief(int beliefNum, string belief);
+        void changeStat(int statNum, int modify):
+        void changeBelief(int beliefNum, string newBelief);
+        void changeInstinct(int InstNum, string newInst):
+        Character endSession(text.file);
+}
+
+class Beliefs{
+    virtue
+    trait
+    flaw
+    weakness
+
+}
+
+
+Character(){
+    playerName = null;
+    charName = null;
+    statsArray = 0;
+    beliefs = null;
+    instincts = null;
+}
+
+Character(string inPLayerName, string inCharName, int[] inStatsArray, string[] inBeliefArray, string[] inInstArray){
+    setPlayerName(inPlayerName);
+    setCharName(inCharName);
+    setStats(inStatsArray);
+    setBeliefs(inBeliefArray);
+    setInstincts(inInstArray);
+}
+
+
+
+
+main{
+    Character();
+    Character(Jacie, stats, beliefs, instincts);
+
+}
+
+setName(setStats)

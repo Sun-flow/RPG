@@ -1,0 +1,115 @@
+Aeroya Glorie
+Tanner Keen
+Tess Polishname
+Opening, character scenes
+
+Small town, 8 buildings
+    Church, Bathhouse, Market, Pub/inn, smithy, 3 houses in a small cluster
+        3 Houses are player houses filled with whatever NPCs they know/live with
+        Smith: Nate Winchaw, mid 50s widow, never remarried. Lives alone. Weapons he crafts rarely break and dull very slowly. Mild control over earth. 19 year old son, Jogan, went missing 8 months ago. 
+        Market (First Stop): Family owned for two generations, general goods shipped in from other towns. Beck Nausram is owner, mid forties man with no discernable powers, aided by two sons (Pete, 11; Jackie 7) and one daughter (Marnie, 14). Wife Kylie is infirmed, hasn’t been able to leave bed in 4 years.
+        Pub/inn (Green Thumb): Ashna Majone, young 20s runs with her late 20s wife Paraine Ai. Wanderers who settled into town two years ago after eloping. Run a community garden together, each with their own plant-based powers. Ashna has an absurdly green thumb, while Paraine can control water and sense storms. 
+            Currently housing single occupant, has been around for <1 week. Tracker from four towns over, doesn’t speak to others much. Late 30s male, Noy. Born with mutated splotches over his body, can track mutated creatures. Works as a bounty hunter for dangerous mutant outbreaks.
+
+Discussion with Ashna, Paraine, or Beck gives players word from nearby farms that there have been attacks on crops in the night
+    Inn traffic has been low this season, travellers have been scared off the roads by ghost stories, or so Paraine says. Ashna thinks it’s just a slow year, isn’t superstitious.
+
+Nell character scene having nightmare of what happened with them and jogan, similar to how Nell did with haze (lipz-esque)
+    Have Nell set up, maybe in a cave?
+    Force a separation at some point
+    Make Nell roll to see if dream stayed repressed
+
+Noy approaches Aeroya about their thoughts, initially suspicious that they killed Jogan
+    If dream is not well repressed, highly possible for Noy to already have significant details of Jogan’s demise
+
+Jackie runs into town screaming for help
+
+Corvin Hewell, traveling merchant, collapses at the town gate, barely supported by Marnie and Pete. 
+    Seems like he was attacked by beasts, warns everyone against the wilderness
+    Taken to inn under Paraine’s care, possibly a player’s house’
+    Noy hovers around outskirts of commotion, looks for moment to speak with Corvin under his breath.
+
+Town meeting is called to discuss the threat, total of 10 people max, 3 of them children
+    Many townspeople are scared, arguing over recent word from other farms and towns. Corvin is quiet for the majority of discussion, then speaks up to say “I know what I saw...and it ain’t normal. Beasts took down my horse in no time flat. Not like no wolves.”
+    Nate gets frustrated and irate, slams fist and claims it’s the same things that got a hold of Jogan. 
+
+Players have opportunity to find out that there was a recent disappearance from the parish, a teenage boy, the son of a local farmer, disappeared 8 months prior 
+    Suspected of similar dog attack
+
+Players convene and decide to intervene in order to defend the town
+    Noy asks for hands to go hunting
+        Nate volunteers, so does Paraine.
+
+Players go out into woods, find mildly monstrous tracks, decide to follow
+
+Woods thicken, damage to foliage increases and begins to look like thrashing/rabid action, more tracks indicate multiple animals
+
+Attacked by two mutated wild dogs on the way
+    What is the mutation?
+
+Tracks lead to abandoned overgrown railway station, windows boarded up and door missing
+    Final confrontation location?
+
+Possible player paths
+    Stake out location
+        Witness mutated animals coming and going from the station (dogs, racoons, maybe a bear?)
+        Sometimes carrying things, food or shiny objects, raw materials
+            Looks like they’re stockpiling or preparing to build something
+    Enter building right away
+        Scuttling noises around them, dark corridors and empty rooms. Heaps of raw materials, organic matter, food, etc. 
+        Step into train bay
+        Players encounter hunched form, possibly consuming something?
+        Person recognizes them, turns around and begins babbling nonsense at them
+        Nate recognizes Jogan, screams for him.
+        Jogan looks right through Nate, continuing to babble at him incoherently. 
+        Nate steps towards Jogan, weeping and begging him to listen, to understand. Before he can get too close, Noy holds an arm out to stop him. They argue for a moment, Noy points to Jogans left arm which is festering and swollen, screaming about mutations and insanity.
+        Snarling noises grow surrounding the players, Jogan’s expression turns to rage, he screeches at the party and lunges
+        After a short scuffle, or until Jogan is injured, Jogan runs out of the train station and along the tracks
+
+Party Crossroads
+    Nate immediately chases after him
+    Rest of party is likely not so immediate in their chase
+        Inquisition of Noy to see what he knows
+            Bounty hunter, fire is the best way to kill those who have succumbed to the mutation
+            Players will likely search for a way to save Jogan, I should offer it to them. Maybe Paraine is the possible answer?
+            If players look for cure, Noy can inform them that mutation insanity is reversible before a certain point, but very difficult and dangerous and requires a healer. 
+    Courses of action:
+        Capture Jogan
+            Once restrained by Nate, Paraine will reveal that she used to work as a healer if she has not done so already. It’s been years, and she moved to the middle of nowhere for a reason, but she can’t let him be killed by his own father.
+            If party returns him successfully to the town, Beck will provide the necessary materials for Paraine to heal Jogan. 
+            Much screaming and restraining later, plus an arm amputation, Jogan will be brought back from the brink of insanity, somewhat of a shell of his former self, scarring leading from his arm stump across his chest/back and up his face. 
+            Noy disappears, leaving the party with a few answers and many questions. 
+        Kill Jogan
+            Jesus guys...what the fuck
+            Nate descends into isolation and insanity
+            Paraine and Ashna move away
+
+
+
+
+
+
+Pros
+Char creation feels good, actionable and easy to jump in
+Narrative world really good
+Cons
+PvP mechanics need definition
+Modifiers feel convoluted, too many
+Character advancement feels too complicated, partly due to modifiers
+No exp mechanics
+Give mechanical incentive for characters to do what you want them to do
+Need to flesh out social/non-combat moves
+
+
+Improvements
+Drawbacks + advantages
+Setting premise can be shared by what moves are available to you
+Mechanics around fear of becoming a monster
+Research Burning wheel for progression mechanics
+Capes Cowls and Villains Fowl power freedom
+Adam Cobal
+
+
+
+
+

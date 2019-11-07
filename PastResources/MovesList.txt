@@ -1,0 +1,139 @@
+class Moves{
+    Maintain();
+    Disrupt();
+    Act();
+    Discern();
+    Contest();
+    Protect();
+    Aid/Hinder();
+    Perceive();
+    Influence();
+    OvercomeInstinct();
+}
+
+//Dungeon world 
+    When a player looking for info on unestablished things, make a roll 
+    Depending on roll, player gets to say something that is now true about the world
+
+
+Maintain(){
+    //For a time when a player wishes to maintain control over something, such as their willpower, a use of their powers, or an object
+    //On 10+, choose 3. On 7-9, choose 2.
+        - Maintain control of the target (powers, item, person's thoughts)
+        - Take no harm in your attempt to Maintain
+        - You may continue to act while Maintaining
+        - Prevent disadvantage
+        - Create advantage
+}
+
+Disrupt(){
+    //For a time when a player wishes to disrupt the actions or powers of another entity
+    On 10+, choose 2. On 7-9, choose 1.
+        - Interrupt target's focus
+        - Place target at disadvantage
+        - Impose a condition on target 
+            *Take once for minor condition, twice for moderate. Requires fictional positioning to do so.
+}
+
+Act(){
+    //For a time when a player wishes to complete an action that does not fall under the purview of other Moves
+    On 10+, character completes specified action with no complication.
+    On 7-9, character completes specified action, but the GM may impose a cost, complication, or choice.
+}
+
+Discern(){
+    //For a time when a player wishes for their character to piece together information in order to gain understanding, or when they wish to gain clarity on something that is unclear (even when viewing physically).
+    //This move is always rolled with the insight trait.
+    On 10+, the player may decide how well their character gains understanding from the information provided to them, likely a very favourable outcome
+    On 7-9, the GM will tell the player how well their character gains undrstanding from the information provided to them, likely a moderately favourable outcome
+}
+
+Contest(){ //list of contests
+    //For a situation when two or more entities are vying for control of a target or are matching will against one another
+    
+    Statement of Intent: Each entity must state their desired outcome, or what they are attempting to come out in control of
+   
+    //Maybe make stakes GM only
+    Stakes: Each entity must decide what they are risking by engaging in this contest, or what they stand to lose in the event of a defeat
+        Low Stakes: What is the minimum an entity might lose, in the event that they lose the contest
+        High Stakes: What is the maximum an entity might lose, in the event that they lose the contest
+
+    For Player vs. Player:
+        Each player rolls individually with their desired attribute
+
+    For Player vs. Non-player:
+        The player will determine Statement of Intent and Stakes with the GM
+        Roll against the GM
+
+    Outcome:
+        The player who rolls higher will "win" the contest. Subtract the loser's roll from the winners roll, then determine outcome.
+        On 1-2, Winner gains control of contested objective, loser and winner both lose at least their Low Stakes
+        On 3, Winner gains control of contested objective, loser loses at least Low Stakes. If loser loses High Stakes, winner must lose their Low Stakes
+        On 4+, Winner gains control of contested objective, loser loses High Stakes and winner does not lose any stakes.
+}
+
+Defend(){
+    //For situations in which an entity outside of the character is under threat (physical, verbal, emotional), and the character wishes to act in protection of that entitiy
+    On 10+, player successfully protects target, choose 2. On 7-9, player successfully protects target, choose 1. On 6-, player does not protect target and incurs the threat that was leveled at the target
+        - Take reduced harm, or prevent harm (if fictional positioning allows) in defense of target
+        - Prevent the threat from reaching its target
+        - Avoid being placed at disadvantage
+}
+
+Aid/Hinder(){
+    //For situations in which a character wishes to help or hinder a target attempting to accomplish an action
+    On 10+, target takes +1 or -2 forward, choose 2. On 7-9, target takes +1 or -2 forward, choose 1.
+        - Take no harm in the doing
+        - Give an advantage/disadvantage
+        - Avoid being placed at disadvantage
+}
+
+Perceive(){
+    //For situations in which a character is attempting to gather information from a situation
+    On 10+, ask 3. On 7-9, ask 2. On 6-, ask 1.
+        - What am I looking at?
+        - Have I seen something like this before?
+        - What is most notable to me in my surroundings?
+        - What, if anything, poses a danger to me?
+        - What's the best way to achieve my goal?
+        - Which way should I go?
+        - What, if anything, is out of place?
+        - Any questions you may have 
+}
+
+Influence(){
+    //For situations in which a character is attempting to exert control over the actions of another entity
+    Statement of Intent: Each entity must state their desired outcome  
+        Target: What the entity is attempting to Influence
+        Goal: What the entity wishes to occur in the event of a success
+    
+    Outcome:
+        On 10+, the target is succesfully influenced to the desired goal. 
+        On 7-9, the target will require something from the influencer before they will acquiesce, choose 1.
+            - Offer an obligation
+            - Offer payment
+            - Offer information
+            - You will need to do them a favour first
+}
+
+OvercomeInstinct{
+    //For situations in which a player wishes for their character to go against their instincts
+    
+    //If following your character's instincts would put them in danger, and your character knows this, they gain a +1 to overcome their instincts
+    On 10+, you character is able to overcome their instincts and act in a way that contradicts them.
+    
+    On 7-9, your character is able to overcome their instincts, but it comes at a cost - the GM will impose a cost, complication, or choice, or your character may hesitate in acting.
+    
+    On 6-, the player may make a choice: forcefully overcome their character's instinct at a significant cost, complication, choice, or drawback; or allow their character to act in line with their instincts and incur negative reinforcement of the instinct. 
+        //In the case of a complete failure, they player will likely need to reconsider their instincts at the end of session.
+}
+
+Possible Moves:
+    Supress
+    Attack
+    Expand distract mechanic for combat
+    More social Moves
+    Social resources 
+    Comfort, Insult, etc
+    Distance, stress, connection stat 
+    Between dreams
