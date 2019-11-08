@@ -2,22 +2,23 @@
 #include <vector>
 
 Character::Character(){
-    playerName = null;
-    charName = null;
-    statsArray = 0;
-    beliefs = null;
-    instincts = null;
+    setPlayerName("");
+    setCharName("");
+    int inStats[5] = {0,0,0,0,0};
+    setStats(inStats);
+    //beliefs = new std::vector< std::vector < std::string > >;
+    //instincts = null;
 }
 
-Character::~Character(){
+//Character::~Character(){
 
-}
+//}
 
-Character::Character(std::string inPlayerName, std::string inCharName, int[] inStatArray, std::vector<std::string> inBeliefs){
+Character::Character(std::string inPlayerName, std::string inCharName, int inStatsArray[5], std::vector<std::string> inBeliefs){
     setPlayerName(inPlayerName);
     setCharName(inCharName);
     setStats(inStatsArray);
-    setBeliefs(inBeliefs);
+    //setBeliefs(inBeliefs);
 }
 
 void Character::setPlayerName(std::string inName){
@@ -29,7 +30,7 @@ void Character::setCharName(std::string inName){
 }
 
 void Character::setStats(int inStats[]){
-    for(int i = 0; i < inStats.size(); i++){
+    for(int i = 0; i < 5; i++){ //use array size later
         stats[i] = inStats[i];
     }
 }
@@ -48,24 +49,4 @@ void Character::changeStat(int statNum, int newStat){
 
 void Character::addInjury(int severity, std::string description){
     injuries.addInjury(severity, description);
-}
-
-Injuries::Injuries(){
-
-}
-
-Injuries::Injuries(std::vector< std::vector <std::string > > inInjuries){
-    setInjuries(inInjuries);
-}
-
-Injuries::~Injuries(){
-
-}
-
-void Injuries::setInjuries(std::vector< std::vector< std::string > > inInjuries){
-    injuries = inInjuries;
-}
-
-void Injuries::addInjury(int severity, std::string description){
-    injuries[severity].push_back(description);
 }
