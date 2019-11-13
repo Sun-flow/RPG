@@ -23,6 +23,7 @@ int main(int argc, char *argv[]){
         do{
         std::cin >> in;
             if(in == "N" || in == "n"){
+                std::cout << "Ok! Please input the name you desire." << std::endl;
                 break;
             }
             else if(in == "Y" || in == "y"){
@@ -90,7 +91,11 @@ int main(int argc, char *argv[]){
 
     std::cout << "Time for the fun part: a quiz!" << std::endl << "Fear not, this quiz isn't graded. It will, however, be used to determine your character's starting stats." << std::endl << "Answer wisely!" << std::endl;
     
-    
+    int answer;
+    std::cout << "You awaken to find yourself locked in a cell. How do you escape?" << std::endl;
+    std::cout << "1. Smash the cell door" << std::endl << "2. Pick the lock" << std::endl << "3. Bribe the Guard" << std::endl << "4. Trick the guard" << std::endl <<"5. Stay in the cell" << std::endl;
+    std::cin >> answer;
     std::cout << "Something outside" << std::endl;
 
+    int answer = getNum();
 }
