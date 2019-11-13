@@ -1,5 +1,4 @@
-#include <string>
-#include <iostream>
+#include "mainFoo.h"
 
 bool validBool(){
     std::string in;
@@ -35,7 +34,7 @@ bool validBool(std::string in){
 
 bool validNum(int choices, int in){
     while(1 == 1){
-        if(in >= 1 || in < choices){
+        if(in >= 1 || in <= choices){
             return true;
         }
         else if(in < 1 || in > choices){
@@ -48,10 +47,8 @@ bool validNum(int choices, int in){
 }
 
 
-std::string getBool(){
+std::string getBool(std::string in){
     bool end = false;
-    std::string in;
-    std::cin >> in;
     
     do{
         std::cout << "You input: " << in << std::endl << "Is that what you desired? Y/N" << std::endl;
@@ -71,7 +68,6 @@ int getNum(int choices){
     std::cin >> in;
 
     do{
-        std::cout << "You input: " << in << std::endl << "Is that what you desired? Y/N" << std::endl;
         end = validNum(choices, in);
         if(!end){
             std::cout << "I'm sorry, '" << in << "' is not a valid input" << std::endl;
