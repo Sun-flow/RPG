@@ -14,20 +14,22 @@ Character::Character(){
 
 //}
 
-Character::Character(std::string inPlayerName, std::string inCharName, std::vector< int >inStatsArray){
+Character::Character(std::string inPlayerName, std::string inCharName, std::string inPronouns, std::vector< int >inStatsArray){
     setPlayerName(inPlayerName);
     setCharName(inCharName);
+    pronouns = inPronouns;
     setStats(inStatsArray);
     constructPairs();
+
 }
 
 void Character::constructPairs(){
     constructPair(0, "Chaotic", "Lawful");
     constructPair(1, "Impulsive", "Stoic");
     constructPair(2, "Violent", "Peaceful");
-    constructPair(3, "Introver", "Extrovert");
-    constructPair(4, "Spiritual", "Pragmatic");
-    constructPair(5, "Creative", "Logical");
+    constructPair(3, "Introvert", "Extrovert");
+    constructPair(4, "Composed", "Lost");
+    constructPair(5, "Creative", "Analytical");
     constructPair(6, "Thinking", "Feeling");
 }
 
@@ -37,20 +39,37 @@ void Character::constructPair(int which, std::string first, std::string second){
 }
 
 void Character::toString(){
-    std::cout << "Player: " << playerName << std::endl;
-    std::cout << "Character: " << charName << std::endl;
-    std::cout << "--------Stats--------" << std::endl;
+    std::cout << "Player:       " << playerName << std::endl;
+    std::cout << "Character:    " << charName << std::endl;
+    std::cout << "Pronouns:     " << pronouns << std::endl;
     printStats();
-    std::cout << "---------------------" << std::endl;
+    printNatures();
 }
 
 void Character::printStats(){
-    std::cout << "  Authority:      " << stats[0] << std::endl;
-    std::cout << "  Focus:          " << stats[1] << std::endl;
-    std::cout << "  Sharp:          " << stats[2] << std::endl;
-    std::cout << "  Empathy:        " << stats[3] << std::endl;
-    std::cout << "  Hunger:         " << stats[4] << std::endl;
-    std::cout << "  Lost:           " << stats[5] << std::endl;
+    std::cout << "--------Stats--------" << std::endl;
+    std::cout << "| Grit:           " << stats[0] << " |" << std::endl;
+    std::cout << "| Focus:          " << stats[1] << " |" << std::endl;
+    std::cout << "| Resourceful:    " << stats[2] << " |" << std::endl;
+    std::cout << "| Empathy:        " << stats[3] << " |" << std::endl;
+    std::cout << "| Quick:          " << stats[4] << " |" << std::endl;
+    std::cout << "| Control:        " << stats[5] << " |" << std::endl;
+    std::cout << "---------------------" << std::endl;
+
+}
+
+void Character::printNatures(){
+    std::cout << "~~Natures~~" << std::endl << "-- ";
+    for(auto pair : nature){
+        if(pair.first.value > pair.second.value && pair.first.value != 0){
+            std::cout << pair.first.name << " -- ";
+        }
+        else if(pair.second.value != 0){
+            std::cout << pair.second.name << " -- ";
+        }
+    }
+    std::cout << std::endl;
+
 }
 
 void Character::setPlayerName(std::string inName){
@@ -87,7 +106,7 @@ void Character::changeStat(std::vector< int > which, std::vector < int > modify)
 
 void Character::changeAlignment(std::vector< int > which, std::vector < int > modify){
     while(!which.empty()){
-        if(modify.back() == 0){
+        if(modify.back() == 1){
             nature[which.back() - 1].first.value += 1;
         }
         else{
@@ -97,6 +116,10 @@ void Character::changeAlignment(std::vector< int > which, std::vector < int > mo
         modify.pop_back();
     }
 
+}
+
+void Character::getItem(std::string inItem){
+    items.push_back(inItem);
 }
 
 void Character::setBelief(int beliefNum, std::string belief){

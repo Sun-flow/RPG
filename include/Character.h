@@ -12,7 +12,11 @@ class Character {
     private:
         std::string playerName;
         std::string charName;
-        int stats[6]; //Compsure, Focus, Sharp, Empathy, Hunger, Lost
+        std::string pronouns;
+        int stats[6]; //Grit, Focus, Resourceful, Empathy, Quick, Control
+        //
+
+
         struct nature{
             std::string name;
             int value;
@@ -21,25 +25,35 @@ class Character {
             nature first;
             nature second;
         };
-        pairs nature[3]; //(Chaotic - Lawful), (Impulsive - Stoic), (Violent - Peaceful), (Introvert - Extrovert), (Spiritual, Pragmatic) (Creative, Logical) (Thinking, feeling)
-        //Lawfullness, Impulsiveness, Violence, Extroversion, Spirituality
+        pairs nature[7]; //(Chaotic - Lawful), (Impulsive - Stoic), (Violent - Peaceful), (Introvert - Extrovert), (Composed - Lost) (Creative, Analytical)
+        //Lawfullness, Impulsiveness, Violence, Extroversion, Composure, Creativity, 
         std::vector<std::string> beliefs;
+
+        std::vector<std::string> items;
         
         Injuries injuries;
     public:
         Character();
-        Character(std::string inPlayerName, std::string inCharName, std::vector< int >inStatArray);
+        Character(std::string inPlayerName, std::string inCharName, std::string inPronouns, std::vector< int >inStatArray);
+        
         void toString();
         void printStats();
+        void printNatures();
+
         void constructPairs();
         void constructPair(int which, std::string first, std::string second);
+        
         void setPlayerName(std::string inName);
         void setCharName(std::string inName);
+        
         void setStats(std::vector< int > inStats);
         void statManip(int answer, std::vector< std::vector< int > > whichStat, std::vector< std::vector< int > > modifyStat, std::vector< std::vector< int > > whichNature, std::vector< std::vector< int > > modifyNature);
         void changeStat(std::vector< int > which, std::vector< int > modify);
         void changeStat(int which, int modify);
         void changeAlignment(std::vector< int > which, std::vector< int > modify);
+        
+        void getItem(std::string);
+        
         void setBelief(int beliefNum, std::string belief);
         void setInjuries(std::vector< std::vector< bool > > inInjuries);
         void addBelief(std::string inBelief);
@@ -51,7 +65,9 @@ class Character {
 
 #endif
 
-//Game where characters are generated, then the one shot is them regaining lost memories in the form of a story that plays out with flashbacks while something is happening in real time, maybe like a survival game type thing? Where players have all intentionally lost their memories, then been placed in a world they dont understand or recognize and forced to fight/compete live in a place with a weird outside threat (oh shit, im making a mazerunner game)
+//EXP earned through hitting natures, when enough pips are earned roll "remember", which can be used to save one'sself from a failed roll and recall something about the character or the world outside the dome. 
+
+/*Game where characters are generated, then the one shot is them regaining lost memories in the form of a story that plays out with flashbacks while something is happening in real time, maybe like a survival game type thing? Where players have all intentionally lost their memories, then been placed in a world they dont understand or recognize and forced to fight/compete live in a place with a weird outside threat (oh shit, im making a mazerunner game)
 
 In this game, you will be playing as a character who has lost their memories. Tell me about yourself, before I you lose it all.
 
@@ -75,3 +91,6 @@ Give exp when they act in line with their natures. As players play their nature,
 "What career were you in?"
 
 "Were you part of the first group, or the last?"
+
+
+*/
