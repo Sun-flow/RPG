@@ -20,7 +20,8 @@ MAIN_OBJ 	= $(OBJ_DIR)/main.o
 TEST_OBJ 	= $(OBJ_DIR)/testRPG.o
 
 PROJ_OBJS	= $(OBJ_DIR)/Character.o	\
-			  $(OBJ_DIR)/Injuries.o
+			  $(OBJ_DIR)/Injuries.o		\
+			  $(OBJ_DIR)/mainFoo.o
 
 TEST_NAME	= testRPG
 
