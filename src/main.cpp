@@ -5,7 +5,7 @@ int main(int argc, char *argv[]){
     std::string playerName;
     std::string charName;
 
-    int stats[5] = {0,0,0,0,0};
+    std::vector< int > stats({0,0,0,0,0,0});
     std::vector<std::string> beliefs;
 
     std::cout << "Lets make a character!" << std::endl;
@@ -89,36 +89,22 @@ int main(int argc, char *argv[]){
             }while(!correct);
         }while(!correct);
     }
-    Character Character(playerName, charName, stats);
+    Character myChar(playerName, charName, stats);
     std::cout << "Time for the fun part: a quiz!" << std::endl << "Fear not, this quiz isn't graded. It will, however, be used to determine your character's starting stats." << std::endl << "Answer wisely!" << std::endl;
     
     int answer;
-    std::cout << "You awaken to find yourself locked in a cell. How do you escape?" << std::endl;
-    std::cout << "1. Smash the cell door." << 
-    std::endl << "2. Pick the lock." << 
-    std::endl << "3. Bribe the Guard." << 
-    std::endl << "4. Trick the guard." << 
-    std::endl <<"5. Stay in the cell." << std::endl;
 
-    answer = getNum(5);
-    if(answer == 1){
-        Character.changeStat({}, {2, -1});
+    std::cout << "When in danger, are you more likely to:" << std::endl;
+    std::cout << "1. Fight." << 
+    std::endl << "2. Flee." << 
+    std::endl << "3. Freeze." << std::endl;
 
-    }
-    else if(answer == 2){
-        Character.changeStat({2, 1}, {2, -1});
-    }
-    else if(answer == 3){
-        Character.changeStat({2, 4, 5}, {1, 1, -1});
-    }
-    else if (answer == 4){
-        Character.changeStat({1, 4}, {-1, 2});
-    }
-    else if(answer == 5){
-        Character.changeStat({3, 4, 5}, {2, -2, 1});
-    }
+    answer = getNum(3);
 
-    std::cout << "You've escaped the jail and find yourself in a bustling city." << std::endl;
+    myChar.statManip(answer, 
+    {{1, 2, 6}, {1, 2, 3}, {1, 6}}, {{1, 1, -1}, {-1, 1, 1}, {-1, 2}}, {{2, 3, 7}, {2, 3, 7}, {2, 3, 7}}, {{1, 1, 2}, {2, 1, 1}, {1, 1, 1}}
+    );
+
     std::cout << "What is the first thing you search for?"  << std::endl;
     std::cout << "1. A weapon." <<
     std::endl << "2. An ally." <<
@@ -126,49 +112,5 @@ int main(int argc, char *argv[]){
 
     answer = getNum(3);
 
-    if(answer == 1){
-        Character.changeStat({1, 2, 5}, {2, 1, -2});
-    }
-    else if(answer == 2){
-        Character.changeStat({1, 4, 5}, {-1, 1, 1});
-    }
-    else if(answer == 3){
-        Character.changeStat({2, 3, 5}, {-2, 1, 2});
-    }
-
-    std::cout << "From where do you draw strength?" << std::endl;
-    std::cout << "1. Community." <<
-    std::endl << "2. An unholy amulet." <<
-    std::endl << "3. The summation of my struggles." << 
-    std::endl << "4. My Mother's love." <<
-    std::endl << "5. Food." <<
-    std::endl << "6. My own sharp intellect." <<
-    std::endl << "7. Luck" << std::endl;
-
-    answer = getNum(3);
-
-    if(answer == 1){
-        Character.changeStat({5}, {1});
-    }
-    else if(answer == 2){
-        Character.changeStat({}, {-1, 1, 1});
-    }
-    else if(answer == 3){
-        Character.changeStat({2, 3, 5}, {-2, 1, 2});
-    }
-    else if(answer == 4){
-        Character.changeStat({1, 4, 5,}, {-1, 1, 1});
-    }
-    else if(answer == 5){
-        Character.changeStat({2, 3, 5}, {-2, 1, 2});
-    }
-    else if(answer == 6){
-        Character.changeStat({1, 4, 5,}, {-1, 1, 1});
-    }
-    else if(answer == 7){
-        Character.changeStat({2, 3, 5}, {-2, 1, 2});
-    }
-
-
-    Character.toString();
+    
 }

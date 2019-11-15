@@ -14,7 +14,7 @@ Character::Character(){
 
 //}
 
-Character::Character(std::string inPlayerName, std::string inCharName, int inStatsArray[5]){
+Character::Character(std::string inPlayerName, std::string inCharName, std::vector< int >inStatsArray){
     setPlayerName(inPlayerName);
     setCharName(inCharName);
     setStats(inStatsArray);
@@ -27,6 +27,8 @@ void Character::constructPairs(){
     constructPair(2, "Violent", "Peaceful");
     constructPair(3, "Introver", "Extrovert");
     constructPair(4, "Spiritual", "Pragmatic");
+    constructPair(5, "Creative", "Logical");
+    constructPair(6, "Thinking", "Feeling");
 }
 
 void Character::constructPair(int which, std::string first, std::string second){
@@ -48,6 +50,7 @@ void Character::printStats(){
     std::cout << "  Sharp:          " << stats[2] << std::endl;
     std::cout << "  Empathy:        " << stats[3] << std::endl;
     std::cout << "  Hunger:         " << stats[4] << std::endl;
+    std::cout << "  Lost:           " << stats[5] << std::endl;
 }
 
 void Character::setPlayerName(std::string inName){
@@ -66,6 +69,12 @@ void Character::setStats(std::vector< int > inStats){
         i++;
     }
 }
+
+void Character::statManip(int answer, std::vector< std::vector< int > > whichStat, std::vector< std::vector< int > > modifyStat, std::vector< std::vector< int > > whichNature, std::vector< std::vector< int > > modifyNature){
+    changeStat(whichStat[answer - 1], modifyStat[answer - 1]);
+    changeAlignment(whichNature[answer - 1], modifyNature[answer - 1]);
+}
+
 
 void Character::changeStat(std::vector< int > which, std::vector < int > modify){
     while(!which.empty()){
