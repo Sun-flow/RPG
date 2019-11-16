@@ -22,7 +22,7 @@ class Character {
             nature second;
         };
         pairs nature[3]; //(Chaotic - Lawful), (Impulsive - Stoic), (Violent - Peaceful), (Introvert - Extrovert), (Spiritual, Pragmatic) (Creative, Logical) (Thinking, feeling)
-        //Lawfullness, Impulsiveness, Violence, Extroversion, Spirituality
+        //1Lawfullness, 2Impulsiveness, 3Violence, 4Extroversion, 5Spirituality, 6Creativity, 7Analytic
         std::vector<std::string> beliefs;
         
         Injuries injuries;
