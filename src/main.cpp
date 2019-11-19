@@ -122,7 +122,7 @@ int main(int argc, char *argv[]){
     std::cout << "1. My ex said it best: hottest tits in the west." << 
     std::endl << "2. I'm like..a stain. Reliable. Consistent." <<
     std::endl << "3. A dick. But I mean, I think they meant a lovable one?" << 
-    std::endl << "4. I don't have peers, I just have children." <<
+    std::endl << "4. Peers? I prefer to think of them as my large children." <<
     std::endl << "5. Please don't talk to me." << std::endl;
 
     answer = getNum(5);
@@ -135,6 +135,23 @@ int main(int argc, char *argv[]){
     );
 
 
+    std::cout << "Who was your best friend?" << std::endl;
+    std::cout << "1. I think my parole officer likes me." <<
+    std::endl << "2. My mom!" <<
+    std::endl << "3. The neighborhood cats follow me everywhere." <<
+    std::endl << "4. "
+
+
+    std::cout << "Knock Knock." << std::endl;
+    std::cout << "Who's there!" <<
+    std::endl << "Ow." << 
+    std::endl << "Knock knock who?" <<
+    std::endl << "Don't open the door, it's the cops." <<
+    std::endl;
+
+
+
+    std::cout << "Someone taps on your car window in the middle of the night. What do you do?" << std::endl;
 //Question 2
     std::cout << "When in danger, are you more likely to:" << std::endl;
     std::cout << "1. Fight." << 
@@ -143,13 +160,12 @@ int main(int argc, char *argv[]){
 
     answer = getNum(3);
 
-    std::vector< std::vector < int > > whichStats = {{1, 2, 4}, {1, 3, 5}, {1, 2, 4, 6}};
-    std::vector< std::vector < int > > modifyStats = {{1, 1, -1}, {-1, 1, 1}, {-1, -1, 1, 1}};
-    std::vector< std::vector < int > > whichNatures = {{2, 3, 5}, {2, 3, 5}, {3, 5, 6}};
-    std::vector< std::vector < int > > modifyNatures = {{1, 1, 1}, {2, 2, 1}, {2, 2, 2}};
-
-
-    myChar.statManip(answer, whichStats, modifyStats, whichNatures, modifyNatures);
+    myChar.statManip(answer, 
+    {{1, 2, 4}, {1, 3, 5}, {1, 2, 4, 6}, 
+    {{1, 1, -1}, {-1, 1, 1}, {-1, -1, 1, 1}}, 
+    {{2, 3, 5}, {2, 3, 5}, {3, 5, 6}}, 
+    {{1, 1, 1}, {2, 2, 1}, {2, 2, 2}}
+    );
 
 
 //Question 2
