@@ -100,6 +100,42 @@ int main(int argc, char *argv[]){
     
     int answer;
 
+//Question 1
+    std::cout << "Where did you find yourself most often?" << std::endl;
+    std::cout << "1. In my room, hiding from the world." <<
+    std::endl << "2. With my friends, maybe a party?" <<
+    std::endl << "3. Work, the grind don't stop." <<
+    std::endl << "4. In a tree, a creek, on a rock, anywhere I can see the sun and the stars." <<
+    std::endl << "5. The gym, duh. Want to feel my biceps? ;)" << std::endl;
+
+    answer = getNum(5);
+
+    myChar.statManip(answer,
+        {{1, 2, 4}, {2, 4, 6}, {2, 3, 4, 6}, {1, 2, 4, 5}},
+        {{-1, 2, -1}, {-1, 2, -1}, {1, -1, -1, 1}, {2, 1, -1, -2}},
+        {{4}, {4}, {5, 6}, {5, 6}},
+        {{1}, {2}, {1, 2}, {2, 1}}
+    );
+
+//Question 2
+    std::cout << "What did your peers think of you?" << std::endl;
+    std::cout << "1. My ex said it best: hottest tits in the west." << 
+    std::endl << "2. I'm like..a stain. Reliable. Consistent." <<
+    std::endl << "3. A dick. But I mean, I think they meant a lovable one?" << 
+    std::endl << "4. I don't have peers, I just have children." <<
+    std::endl << "5. Please don't talk to me." << std::endl;
+
+    answer = getNum(5);
+
+    myChar.statManip(answer,
+    {{2, 3, 5, 6}, {2, 3, 6}, {4, 5, 6}, {2, 4, 5, 6}, {2, 4, 5, 6}},
+    {{-1, 1, -1, 1}, {1, 1, -1}, {-2, 1, 2}, {-1, 2, -1, 1}, {2, -1, 1, -1}},
+    {{1, 4, 5}, {1, 2, 5}, {1, 3}, {1, 2, 3, 5}, {1, 4, 6}},
+    {{1, 2, 2}, {1, 2, 1}, {2, 1}, {2, 2, 2, 1}, {2, 1, 2}}
+    );
+
+
+//Question 2
     std::cout << "When in danger, are you more likely to:" << std::endl;
     std::cout << "1. Fight." << 
     std::endl << "2. Flee." << 
@@ -115,11 +151,22 @@ int main(int argc, char *argv[]){
 
     myChar.statManip(answer, whichStats, modifyStats, whichNatures, modifyNatures);
 
+
+//Question 2
+    std::cout << "What is your most powerful quality?" << std::endl;
+    std::cout << "1. I never give up." <<
+    std::endl << "2. I can take a beating and keep on kicking" <<
+    std::endl << "3. I'm no stranger to tragedy, my emotional resolve is unmatched" <<
+    std::endl << "4. My friends, I'm nothing without them" <<
+    std::endl << "5. I could survive anywhere, on anything." <<
+    std::endl;
+
+
+//Question 10
     std::cout << "You wake in an unfamiliar location. What is the first thing you search for?"  << std::endl;
     std::cout << "1. A weapon." <<
     std::endl << "2. An ally." <<
     std::endl << "3. Food, water, shelter." << std::endl;
-
 
     answer = getNum(3);
 
@@ -129,6 +176,20 @@ int main(int argc, char *argv[]){
     {{1, 3}, {1, 3, 4}, {3, 5, 6}}, 
     {{1, 1}, {2, 2, 2}, {2, 1, 1}}
     );
+
+    if(answer == 1){
+        myChar.getItem("Rusty Knife");
+    }
+    else if(answer == 2){
+        myChar.getItem("Chosen bond");
+    }
+    else if(answer == 3){
+        myChar.getItem("Waterskin");
+        myChar.getItem("Dried Rations: 2");
+    }
+    
+
+    
 
     
 

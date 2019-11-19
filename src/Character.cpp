@@ -24,8 +24,8 @@ Character::Character(std::string inPlayerName, std::string inCharName, std::stri
 }
 
 void Character::constructPairs(){
-    constructPair(0, "Chaotic", "Lawful");
-    constructPair(1, "Impulsive", "Stoic");
+    constructPair(0, "Goofy", "Serious");
+    constructPair(1, "Impulsive", "Measured");
     constructPair(2, "Violent", "Peaceful");
     constructPair(3, "Introvert", "Extrovert");
     constructPair(4, "Composed", "Lost");
