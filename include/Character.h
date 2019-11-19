@@ -13,7 +13,7 @@ class Character {
         std::string playerName;
         std::string charName;
         std::string pronouns;
-        int stats[6]; //Grit, Focus, Resourceful, Empathy, Quick, Control
+        int stats[6]; //1Grit, 2Focus, 3Resourceful, 4Empathy, 5Quick, 6Control
         //
 
 
@@ -25,8 +25,8 @@ class Character {
             nature first;
             nature second;
         };
-        pairs nature[7]; //(Chaotic - Lawful), (Impulsive - Stoic), (Violent - Peaceful), (Introvert - Extrovert), (Composed - Lost) (Creative, Analytical)
-        //Lawfullness, Impulsiveness, Violence, Extroversion, Composure, Creativity, 
+        pairs nature[7]; //(Goofy -- Serious), (Impulsive - Measured), (Violent - Peaceful), (Introvert - Extrovert), (Composed - Lost) (Creative, Analytical)
+        //1Seriousness, 2Impulsiveness, 3Violence, 4Extroversion, 5Composure, 6Creativity, 
         std::vector<std::string> beliefs;
 
         std::vector<std::string> items;
