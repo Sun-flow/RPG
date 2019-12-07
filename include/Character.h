@@ -6,14 +6,12 @@
 #include "Injuries.h"
 
 
-
-
 class Character {
     private:
         std::string playerName;
         std::string charName;
         std::string pronouns;
-        int stats[6]; //1Grit, 2Focus, 3Survival, 4Empathy, 5Brains, 6Control
+        int stats[6]; //1Grit, 2Focus, 3Survival, 4Empathy, 5Brains, 6Influence
         //
 
 
@@ -27,7 +25,7 @@ class Character {
         };
         pairs nature[7]; //(Goofy -- Serious), (Impulsive - Measured), (Violent - Peaceful), (Introvert - Extrovert), (Composed - Lost) (Creative, Analytical)
         //1Seriousness, 2Impulsiveness, 3Violence, 4Extroversion, 5Composure, 6Creativity, 
-        //Paranoid
+        //Paranoid - Realistic, Optimistic -- Pessimistic, Emotional -- reserved, 
         std::vector<std::string> beliefs;
 
         std::vector<std::string> items;
@@ -36,8 +34,16 @@ class Character {
     public:
         Character();
         Character(std::string inPlayerName, std::string inCharName, std::string inPronouns, std::vector< int >inStatArray);
-        
-        void toString();
+        Character(std::string inputFile);
+
+
+        void CharToString();
+       
+        int RollStat(int whichStat);
+        void ChangeInfo();
+       
+        void printInjuries();
+
         void printStats();
         void printNatures();
 

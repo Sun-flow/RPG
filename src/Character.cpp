@@ -38,7 +38,7 @@ void Character::constructPair(int which, std::string first, std::string second){
     nature[which].second = {second, 0};
 }
 
-void Character::toString(){
+void Character::CharToString(){
     std::cout << "Player:       " << playerName << std::endl;
     std::cout << "Character:    " << charName << std::endl;
     std::cout << "Pronouns:     " << pronouns << std::endl;
@@ -101,7 +101,6 @@ void Character::changeStat(std::vector< int > which, std::vector < int > modify)
         which.pop_back();
         modify.pop_back();
     }
-
 }
 
 void Character::changeAlignment(std::vector< int > which, std::vector < int > modify){

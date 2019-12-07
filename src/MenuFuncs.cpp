@@ -1,4 +1,4 @@
-#include "mainFoo.h"
+#include "MenuFuncs.h"
 
 bool validBool(){
     std::string in;
