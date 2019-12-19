@@ -5,7 +5,6 @@ class Menu {
     private:
         Character PlayerChar;
     
-
     public:
         Menu();
 
@@ -20,7 +19,5 @@ class Menu {
 
         void InjuriesMenu();
         void BackgroundMenu();
-
-
 
 };

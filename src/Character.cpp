@@ -72,6 +72,14 @@ void Character::printNatures(){
 
 }
 
+void Character::printFullMoves(){
+    charMoves.printFullMoves();
+}
+
+void Character::printSingleMove(int whichMove){
+    charMoves.printSingleMove(whichMove);
+}
+
 void Character::setPlayerName(std::string inName){
     playerName = inName;
 }
@@ -135,4 +143,22 @@ void Character::changeStat(int statNum, int newStat){
 
 void Character::addInjury(int severity, std::string description){
     injuries.addInjury(severity, description);
+}
+
+int Character::DMovesSize(){
+    return charMoves.DMovesSize();
+}
+
+void Character::addMove(int inWhichMod, std::string inName, std::string inDesc){
+    charMoves.addMove(inWhichMod, inName, inDesc);
+}
+
+int Character::rollMove(int whichMove){
+
+    int moveMod = stats[charMoves.whichMod(whichMove - 1) - 1];
+    return charMoves.rollMove(moveMod);
+}
+
+void Character::editMove(int inWhichMove, int whichPart){
+    charMoves.editMove(inWhichMove, whichPart);
 }

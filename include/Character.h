@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include "Injuries.h"
+#include "Moves.h"
 
 
 class Character {
@@ -19,13 +20,22 @@ class Character {
             std::string name;
             int value;
         };
+
         struct pairs{
             nature first;
             nature second;
         };
+
         pairs nature[7]; //(Goofy -- Serious), (Impulsive - Measured), (Violent - Peaceful), (Introvert - Extrovert), (Composed - Lost) (Creative, Analytical)
         //1Seriousness, 2Impulsiveness, 3Violence, 4Extroversion, 5Composure, 6Creativity, 
         //Paranoid - Realistic, Optimistic -- Pessimistic, Emotional -- reserved, 
+        
+        
+        
+        
+        Moves charMoves;
+        
+        
         std::vector<std::string> beliefs;
 
         std::vector<std::string> items;
@@ -41,14 +51,22 @@ class Character {
        
         int RollStat(int whichStat);
         void ChangeInfo();
+
+        
        
         void printInjuries();
 
         void printStats();
         void printNatures();
 
+        void printFullMoves();
+        void printSingleMove(int whichMove);
+        
         void constructPairs();
         void constructPair(int which, std::string first, std::string second);
+
+        void createMove();
+        void changeMove();
         
         void setPlayerName(std::string inName);
         void setCharName(std::string inName);
@@ -67,6 +85,15 @@ class Character {
         //void changeStat(int statNum, int newStat);
         void addInjury(int severity, std::string description);
         
+        int DMovesSize();
+
+
+        void addMove(int inWhichMod, std::string inName, std::string inDesc);
+        int rollMove(int whichMove);
+
+
+        void editMove(int inWhichMove, int whichPart);
+
         //void endSession(text.file);
 };
 

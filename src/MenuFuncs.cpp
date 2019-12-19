@@ -1,4 +1,5 @@
 #include "MenuFuncs.h"
+#include <limits>
 
 bool validBool(){
     std::string in;
@@ -33,16 +34,14 @@ bool validBool(std::string in){
 }
 
 bool validNum(int choices, int in){
-    while(1 == 1){
-        if(in >= 1 || in <= choices){
-            return true;
-        }
-        else if(in < 1 || in > choices){
-            return false;
-        }
-        else{
-            return false;
-        }
+    if(in >= 1 && in <= choices){
+        return true;
+    }
+    else if(in < 1 || in > choices){
+        return false;
+    }
+    else{
+        return false;
     }
 }
 
@@ -65,14 +64,27 @@ std::string getBool(std::string in){
 int getNum(int choices){
     bool end = false;
     int in;
-    std::cin >> in;
+    std::cout << "> ";
+    
+    //std::cin >> in;
 
     do{
-        end = validNum(choices, in);
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        if(std::cin >> in){
+            end = validNum(choices, in);
+        }
+        else if(std::cin.bad()){
+            std::cout << "Bad Input" << std::endl;
+            std::cin.clear();
+            std::cin.ignore();
+        }
+        else{
+            std::cout << "Failed Input" << std::endl;
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        }
         if(!end){
             std::cout << "I'm sorry, '" << in << "' is not a valid input" << std::endl;
-            std::cout << "Please input a value between 1 and " << choices << "." << std::endl;
-            std::cin >> in;
+            std::cout << "Please input a value between 1 and " << choices << "." << std::endl;            
         }
     }while(!end);
     return in;

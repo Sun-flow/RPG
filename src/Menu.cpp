@@ -1,6 +1,8 @@
 #include "Menu.h"
 #include <iostream>
 #include "MenuFuncs.h"
+#include <sstream>
+
 Menu::Menu(){
 
 }
@@ -10,9 +12,8 @@ void Menu::StartMenu(){
     std::cout << "1. Create New Character" << 
     std::endl << "2. Import an Old Character" << std::endl;
 
-    int answer;
-    std::cin >> answer;
-
+    int answer = getNum(2);
+    
     bool done = false;
 
     while(!done){
@@ -27,6 +28,8 @@ void Menu::StartMenu(){
                 std::string filePath;
                 std::cin >> filePath;
                 //Character MyChar(filePath);
+
+                
                 //TODO: Import character file
             }
                 break;
@@ -52,7 +55,7 @@ void Menu::MainMenu(){
             CharMenu();
             break;
         case 2:
-            //MovesMenu();
+            MovesMenu();
             break;
     }
 }
@@ -86,6 +89,64 @@ void Menu::CharMenu(){
             MainMenu();        
             break;
     }
+}
+
+void Menu::MovesMenu(){
+    PlayerChar.printFullMoves();
+
+    std::cout << "Would you like to: " <<
+    std::endl << "1. Roll" << 
+    std::endl << "2. Details" <<
+    std::endl << "3. Add" << 
+    std::endl << "4. Back" << std::endl;
+
+    int answer = getNum(4); 
+
+    if(answer == 1){
+        std::cout << "Which move would you like to roll?" << std::endl;
+        int answer = getNum(PlayerChar.DMovesSize());
+        std::cout << "Result: " << PlayerChar.rollMove(answer) << std::endl;
+        MovesMenu();
+    }
+    else if(answer == 2){
+        std::cout << "Which move would you like to view?" << std::endl;
+        int move = getNum(PlayerChar.DMovesSize());
+        PlayerChar.printSingleMove(move);
+        std::cout << "What would you like to change?" << 
+        std::endl << "1. Edit Name. " << 
+        std::endl << "2. Edit Description" <<
+        std::endl << "3. Edit Relevant Stat" <<
+        std::endl << "4. Delete" << 
+        std::endl << "5. Back" << std::endl;
+
+        int answer = getNum(5);
+        
+        if(answer != 5){
+            PlayerChar.editMove(move, answer);
+        }   
+        
+        
+        MovesMenu();
+    }
+    else if(answer == 3){
+        std::string inName;
+        std::cout << "Please input the name of your new move. " << std::endl;
+        getline(std::cin >> std::ws, inName);
+        std::cout << "Now, give a brief move description." << std::endl;
+        std::string inDesc;
+        getline(std::cin >> std::ws, inDesc);
+        std::cout << "What stat should this move use as a modifier?" << std::endl;
+        int whichStat = getNum(6);
+        std::cout << "It thinks its: " << whichStat << std::endl;
+        PlayerChar.addMove(whichStat, inName, inDesc);
+        MovesMenu();
+    }
+    else if(answer == 4){
+        MainMenu();
+    }
+    
+
+
 }
 
 Character Menu::CreateChar(){
